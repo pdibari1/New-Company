@@ -1,0 +1,160 @@
+
+:root {
+  --primary-color: #ff7f50;
+  --bg-light: #fdf6f0;
+  --text-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background: #fff;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  margin: 0 1em;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+.hero {
+  text-align: center;
+  background: linear-gradient(to bottom, #c8e8f4, #fcd5ce);
+  padding: 4em 2em 2em;
+}
+
+.hero h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #5d3a3a;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+  color: #5d3a3a;
+}
+
+.button {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 1em 2em;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1em;
+}
+
+.hero img {
+  max-width: 90%;
+  height: auto;
+  margin-top: 2em;
+  border-radius: 20px;
+}
+
+.steps {
+  text-align: center;
+  padding: 4em 2em;
+  background: #fff;
+}
+
+.steps h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2em;
+  margin-bottom: 2em;
+}
+
+.step-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.step {
+  background: #fafafa;
+  padding: 2em;
+  border-radius: 12px;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.step img {
+  width: 50px;
+  margin-bottom: 1em;
+}
+
+.step p {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.cta {
+  text-align: center;
+  padding: 4em 2em;
+  background: linear-gradient(to bottom, #fcd5ce, #c8e8f4);
+}
+
+.cta h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+footer {
+  background: #eee;
+  padding: 2em;
+  text-align: center;
+  font-size: 0.9em;
+  color: #777;
+}
+
+footer a {
+  margin: 0 0.5em;
+  color: #777;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .step-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    width: 80%;
+  }
+}
