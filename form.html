@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Story Characters Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 700px; margin: auto; }
+    .section { margin-bottom: 20px; }
+    .character-group { margin-left: 20px; margin-top: 10px; }
+    label { display: block; margin: 5px 0 2px; }
+    input, select { padding: 5px; width: 100%; max-width: 300px; }
+  </style>
+</head>
+<body>
+
+  <h2>Story Character Form</h2>
+
+  <!-- Main Characters Section -->
+  <div class="section">
+    <label for="mainCount">How many characters are in your story?</label>
+    <select id="mainCount" onchange="renderMainCharacters()">
+      <option value="">Select</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <div id="mainCharacters" class="character-group"></div>
+  </div>
+
+  <!-- Main Character Location -->
+  <div class="section">
+    <label for="mainLocation">Where does the main character live?</label>
+    <input type="text" id="mainLocation" />
+  </div>
+
+  <!-- Secondary Characters Section -->
+  <div class="section">
+    <label for="secondaryCount">How many secondary characters are there?</label>
+    <select id="secondaryCount" onchange="renderSecondaryCharacters()">
+      <option value="">Select</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+    <div id="secondaryCharacters" class="character-group"></div>
+  </div>
+
+  <script>
+    function renderMainCharacters() {
+      const count = parseInt(document.getElementById('mainCount').value);
+      const container = document.getElementById('mainCharacters');
+      container.innerHTML = '';
+
+      for (let i = 1; i <= count; i++) {
+        container.innerHTML += `
+          <strong>Main Character ${i}</strong>
+          <label>Name:</label><input type="text" name="mainName${i}" />
+          <label>Age:</label><input type="number" name="mainAge${i}" />
+        `;
+      }
+    }
+
+    function renderSecondaryCharacters() {
+      const count = parseInt(document.getElementById('secondaryCount').value);
+      const container = document.getElementById('secondaryCharacters');
+      container.innerHTML = '';
+
+      for (let i = 1; i <= count; i++) {
+        container.innerHTML += `
+          <strong>Secondary Character ${i}</strong>
+          <label>Name:</label><input type="text" name="secondaryName${i}" />
+          <label>Age:</label><input type="number" name="secondaryAge${i}" />
+          <label>Relationship to main character(s):</label><input type="text" name="secondaryRelation${i}" />
+        `;
+      }
+    }
+  </script>
+
+</body>
+</html>
