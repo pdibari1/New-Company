@@ -1,0 +1,63 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Smile, BookOpen, Sparkles } from "lucide-react";
+import { motion } from "framer-motion";
+
+export default function HomePage() {
+  return (
+    <main className="min-h-screen bg-gradient-to-br from-pink-100 via-yellow-100 to-green-100 p-6 text-center">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-4xl mx-auto"
+      >
+        <h1 className="text-5xl font-extrabold text-pink-700 mb-4">
+          Growing Minds 🌱
+        </h1>
+        <p className="text-xl text-gray-700 mb-8">
+          Personalized books that nurture your child’s heart and mind ❤️📚
+        </p>
+        <Button className="text-lg px-6 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-2xl shadow-xl">
+          Create Your Book
+        </Button>
+
+        <section className="mt-16 grid md:grid-cols-3 gap-6">
+          <Card className="bg-white rounded-2xl shadow-xl p-4">
+            <CardContent>
+              <Smile className="w-12 h-12 text-yellow-500 mb-4 mx-auto" />
+              <h3 className="text-xl font-semibold text-pink-700 mb-2">Happy Stories</h3>
+              <p className="text-gray-600">
+                Joyful tales designed to build empathy, resilience, and self-confidence.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-white rounded-2xl shadow-xl p-4">
+            <CardContent>
+              <BookOpen className="w-12 h-12 text-green-500 mb-4 mx-auto" />
+              <h3 className="text-xl font-semibold text-pink-700 mb-2">Personalized Pages</h3>
+              <p className="text-gray-600">
+                Each book is uniquely tailored with your child’s name, traits, and needs.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="bg-white rounded-2xl shadow-xl p-4">
+            <CardContent>
+              <Sparkles className="w-12 h-12 text-blue-500 mb-4 mx-auto" />
+              <h3 className="text-xl font-semibold text-pink-700 mb-2">Developmental Focus</h3>
+              <p className="text-gray-600">
+                Address key milestones like emotional regulation, friendship, and self-worth.
+              </p>
+            </CardContent>
+          </Card>
+        </section>
+
+        <footer className="mt-20 text-gray-500 text-sm">
+          © 2025 Growing Minds. Made with 💖 for kids everywhere.
+        </footer>
+      </motion.div>
+    </main>
+  );
+}
