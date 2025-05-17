@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Story Characters Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 700px; margin: auto; }
+    .section { margin-bottom: 20px; }
+    .character-group { margin-left: 20px; margin-top: 10px; }
+    label { display: block; margin: 5px 0 2px; }
+    input, select, button { padding: 5px; width: 100%; max-width: 300px; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+
+  <h2>Story Character Form</h2>
+
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="storyForm">
+    
+    <!-- Main Characters Section -->
+    <div class="section">
+      <label for="mainCount">How many characters are in your story?</label>
+      <select id="mainCount" name="main_character_count" onchange="renderMainCharacters()" required>
+        <option value="">Select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <div id="mainCharacters" class="character-group"></div>
+    </div>
+
+    <!-- Main Character Location -->
+    <div class="section">
+      <label for="mainLocation">Where does the main character live?</label>
+      <input type="text" id="mainLocation" name="main_character_location" required />
+    </div>
+
+    <!-- Secondary Characters Section -->
+    <div class="section">
+      <label for="secondaryCount">How many secondary characters are there?</label>
+      <select id="secondaryCount" name="secondary_character_count" onchange="renderSecondaryCharacters()" required>
+        <option value="">Select</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+      <div id="secondaryCharacters" class="character-group"></div>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function renderMainCharacters() {
+      const count = parseInt(document.getElementById('mainCount').value);
+      const container = document.getElementById('mainCharacters');
+      container.innerHTML = '';
+
+      for (let i = 1; i <= count; i++) {
+        container.innerHTML += `
+          <strong>Main Character ${i}</strong>
+          <label>Name:</label><input type="text" name="main_character_${i}_name" required />
+          <label>Age:</label><input type="number" name="main_character_${i}_age" required />
+        `;
+      }
+    }
+
+    function renderSecondaryCharacters() {
+      const count = parseInt(document.getElementById('secondaryCount').value);
+      const container = document.getElementById('secondaryCharacters');
+      container.innerHTML = '';
+
+      for (let i = 1; i <= count; i++) {
+        container.innerHTML += `
+          <strong>Secondary Character ${i}</strong>
+          <label>Name:</label><input type="text" name="secondary_character_${i}_name" required />
+          <label>Age:</label><input type="number" name="secondary_character_${i}_age" required />
+          <label>Relationship to main character(s):</label>
+          <input type="text" name="secondary_character_${i}_relationship" required />
+        `;
+      }
+    }
+  </script>
+
+</body>
+</html>
