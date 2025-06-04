@@ -1,178 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Growing Minds – Personalized Books for Kids</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Bright Minds Books</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Nunito&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #ff7e6b;
-      --secondary: #fcd34d;
-      --bg: #fffaf0;
-      --text: #1f2937;
-      --card-bg: white;
-    }
-
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      font-family: 'Quicksand', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 0;
+      font-family: 'Nunito', sans-serif;
+      background-color: #fffdf8;
+      color: #333;
+      line-height: 1.6;
     }
 
     header {
-      width: 100%;
-      background: var(--primary);
-      color: white;
-      padding: 3rem 1rem 5rem;
+      background: #fff2d5;
+      padding: 2rem;
       text-align: center;
     }
 
     header h1 {
-      font-size: 3rem;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
 
     header p {
-      font-size: 1.3rem;
-      max-width: 700px;
-      margin: 0 auto;
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
     }
 
-    .hero-image {
-      margin-top: -4rem;
-      width: 100%;
-      max-width: 700px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      border-radius: 1rem;
-      overflow: hidden;
-    }
-
-    .hero-image img {
-      width: 100%;
-      display: block;
-    }
-
-    .cta-section {
-      background: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: -3rem;
-    }
-
-    .cta-section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .cta-button {
-      font-size: 1.1rem;
-      background: var(--primary);
-      color: white;
-      padding: 0.8rem 2rem;
+    .btn-primary {
+      background: #ffb347;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
       border: none;
-      border-radius: 9999px;
+      border-radius: 30px;
+      font-size: 1rem;
       cursor: pointer;
-      margin-top: 1rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: background 0.3s;
+      transition: background 0.3s ease;
     }
 
-    .cta-button:hover {
-      background: #fb5036;
+    .btn-primary:hover {
+      background: #ffa726;
     }
 
-    .features-section {
-      padding: 4rem 1rem;
-      background: var(--secondary);
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .how-it-works {
       text-align: center;
     }
 
-    .features-section h2 {
-      font-size: 2rem;
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 2rem;
+    }
+
+    .step {
+      width: 30%;
+      min-width: 250px;
       margin-bottom: 2rem;
     }
 
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
+    .step h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
     }
 
-    .feature-card {
-      background: white;
-      padding: 2rem;
-      border-radius: 1rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    .featured-books {
+      text-align: center;
     }
 
-    .feature-card h3 {
-      color: var(--primary);
-      margin-top: 1rem;
-      font-size: 1.3rem;
+    .books {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 2rem;
     }
 
-    .feature-card p {
-      font-size: 1rem;
+    .book {
+      background: #fdf6ec;
+      border-radius: 12px;
+      padding: 1rem;
+      margin: 1rem;
+      width: 250px;
+    }
+
+    .book h4 {
+      font-size: 1.1rem;
       margin-top: 0.5rem;
     }
 
     footer {
-      background: #f3f4f6;
+      background: #fff2d5;
+      padding: 2rem;
       text-align: center;
-      padding: 2rem 1rem;
       font-size: 0.9rem;
-      color: #6b7280;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>Growing Minds 📚</h1>
-    <p>Beautiful, personalized hardcover books that guide your child through big developmental moments with empathy, joy, and magic.</p>
+    <h1>Books That Help Little Hearts Grow Big</h1>
+    <p>Personalized stories that build empathy, confidence, and kindness.</p>
+    <button class="btn-primary">Create Your Book</button>
   </header>
 
-  <div class="hero-image">
-    <img src="assets/twokids2.png" alt="Two kids sharing a magical book">
-  </div>
-
-  <section class="cta-section">
-    <h2>Create Your One-of-a-Kind Book Today</h2>
-    <button class="cta-button">Start Personalizing</button>
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>Pick a Character</h3>
+        <p>Add your child's name, appearance, and even their favorite animal.</p>
+      </div>
+      <div class="step">
+        <h3>Choose a Lesson</h3>
+        <p>Topics like friendship, empathy, bravery, self-regulation, and kindness.</p>
+      </div>
+      <div class="step">
+        <h3>Get a Hardcover Book</h3>
+        <p>Delivered to your door — designed to be read again and again.</p>
+      </div>
+    </div>
+    <button class="btn-primary">Start Now</button>
   </section>
 
-  <section class="features-section">
-    <h2>What Makes Growing Minds Special?</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <h3>✨ Fully Personalized</h3>
-        <p>From name to environment to the story arc, your child is the hero of their own journey.</p>
+  <section class="featured-books">
+    <h2>Featured Books</h2>
+    <div class="books">
+      <div class="book">
+        <img src="https://via.placeholder.com/200x250.png?text=Ella+and+the+Friendship+Forest" alt="Ella and the Friendship Forest" />
+        <h4>Ella and the Friendship Forest</h4>
+        <p>#Kindness #Friendship</p>
       </div>
-      <div class="feature-card">
-        <h3>💛 Developmental Support</h3>
-        <p>Our books are built around key emotional and social milestones — created with experts.</p>
+      <div class="book">
+        <img src="https://via.placeholder.com/200x250.png?text=Logan+Learns+to+Shine" alt="Logan Learns to Shine" />
+        <h4>Logan Learns to Shine</h4>
+        <p>#Confidence #Bravery</p>
       </div>
-      <div class="feature-card">
-        <h3>📬 Hardcover Delivery</h3>
-        <p>Receive a high-quality hardcover edition right at your doorstep — made to be cherished forever.</p>
+      <div class="book">
+        <img src="https://via.placeholder.com/200x250.png?text=Ava+Calms+Down" alt="Ava Calms Down" />
+        <h4>Ava Calms Down</h4>
+        <p>#SelfRegulation #Mindfulness</p>
       </div>
     </div>
   </section>
 
   <footer>
-    © 2025 Growing Minds. Books that grow with your child. 💖
+    <p>For every 10 books sold, we donate 1 to a school or shelter.</p>
+    <p>&copy; 2025 Bright Minds Books. All rights reserved.</p>
   </footer>
 </body>
+
 </html>
