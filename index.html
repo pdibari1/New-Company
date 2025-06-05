@@ -22,34 +22,44 @@
 
     header {
       background: #fff2d5;
-      padding: 2rem;
+      padding: 3rem 1rem;
       text-align: center;
+      position: relative;
+    }
+
+    header img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1.5rem;
     }
 
     header h1 {
       font-family: 'Quicksand', sans-serif;
       font-size: 2.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
 
     header p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       margin-bottom: 1.5rem;
     }
 
     .btn-primary {
-      background: #ffb347;
+      background: #ff9900;
       color: #fff;
       padding: 0.75rem 1.5rem;
       border: none;
       border-radius: 30px;
       font-size: 1rem;
       cursor: pointer;
-      transition: background 0.3s ease;
+      display: inline-flex;
+      align-items: center;
     }
 
-    .btn-primary:hover {
-      background: #ffa726;
+    .btn-primary img {
+      margin-left: 0.5rem;
+      width: 1rem;
+      height: 1rem;
     }
 
     section {
@@ -73,6 +83,13 @@
       width: 30%;
       min-width: 250px;
       margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .step img {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1rem;
     }
 
     .step h3 {
@@ -99,6 +116,12 @@
       width: 250px;
     }
 
+    .book img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
     .book h4 {
       font-size: 1.1rem;
       margin-top: 0.5rem;
@@ -115,47 +138,48 @@
 
 <body>
   <header>
+    <img src="hero-illustration.png" alt="Mother reading to child illustration">
     <h1>Books That Help Little Hearts Grow Big</h1>
-    <p>Personalized story books to help kids get through the hard things.</p>
-    <button class="btn-primary">Create Your Book</button>
+    <p>Personalized stories that build empathy, confidence, and kindness.</p>
+    <button class="btn-primary">Create Your Book <img src="start-now-arrow.png" alt="Arrow"></button>
   </header>
 
   <section class="how-it-works">
     <h2>How It Works</h2>
     <div class="steps">
       <div class="step">
+        <img src="icon-pick-character.png" alt="Pick a Character Icon">
         <h3>Pick a Character</h3>
-        <p>Add all the information about your child. Name, age, where they live, andything special about their home or surroundings. </p>
+        <p>Add your child's name, appearance, and even their favorite animal.</p>
       </div>
       <div class="step">
+        <img src="icon-choose-lesson.png" alt="Choose a Lesson Icon">
         <h3>Choose a Lesson</h3>
-        <p>Tell us what development area your child is working on.</p>
+        <p>Topics like friendship, empathy, bravery, self-regulation, and kindness.</p>
       </div>
       <div class="step">
+        <img src="icon-hardcover-book.png" alt="Hardcover Book Icon">
         <h3>Get a Hardcover Book</h3>
         <p>Delivered to your door — designed to be read again and again.</p>
       </div>
     </div>
-    <button class="btn-primary">Start Now</button>
+    <button class="btn-primary">Start Now <img src="start-now-arrow.png" alt="Arrow"></button>
   </section>
 
   <section class="featured-books">
     <h2>Featured Books</h2>
     <div class="books">
       <div class="book">
-        <img src="https://via.placeholder.com/200x250.png?text=Ella+and+the+Friendship+Forest" alt="Ella and the Friendship Forest" />
+        <img src="ella-friendship-forest.png" alt="Ella and the Friendship Forest">
         <h4>Ella and the Friendship Forest</h4>
-        <p>#Kindness #Friendship</p>
       </div>
       <div class="book">
-        <img src="https://via.placeholder.com/200x250.png?text=Logan+Learns+to+Shine" alt="Logan Learns to Shine" />
+        <img src="logan-learns-to-shine.png" alt="Logan Learns to Shine">
         <h4>Logan Learns to Shine</h4>
-        <p>#Confidence #Bravery</p>
       </div>
       <div class="book">
-        <img src="https://via.placeholder.com/200x250.png?text=Ava+Calms+Down" alt="Ava Calms Down" />
+        <img src="ava-calms-down.png" alt="Ava Calms Down">
         <h4>Ava Calms Down</h4>
-        <p>#SelfRegulation #Mindfulness</p>
       </div>
     </div>
   </section>
