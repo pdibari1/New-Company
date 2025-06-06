@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Growing Minds</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Nunito&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Nunito&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
@@ -23,28 +23,42 @@
     header {
       background: #fff2d5;
       padding: 3rem 1rem;
-      text-align: center;
-      position: relative;
     }
 
-    header img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 1.5rem;
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 1200px;
+      margin: auto;
+      gap: 2rem;
     }
 
-    header h1 {
+    @media (min-width: 768px) {
+      .hero-container {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+      }
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h1 {
       font-family: 'Quicksand', sans-serif;
       font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
     }
 
-    header p {
+    .hero-text p {
       font-size: 1.1rem;
       margin-bottom: 1.5rem;
     }
 
-    .btn-primary {
+    .hero-text .btn-primary {
       background: #ff9900;
       color: #fff;
       padding: 0.75rem 1.5rem;
@@ -56,10 +70,21 @@
       align-items: center;
     }
 
-    .btn-primary img {
+    .hero-text .btn-primary img {
       margin-left: 0.5rem;
       width: 1rem;
       height: 1rem;
+    }
+
+    .hero-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
     }
 
     section {
@@ -68,21 +93,24 @@
       margin: auto;
     }
 
-    .how-it-works {
+    .how-it-works h2 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 2rem;
       text-align: center;
+      margin-bottom: 2rem;
     }
 
     .steps {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      margin-top: 2rem;
+      gap: 2rem;
     }
 
     .step {
-      width: 30%;
+      flex: 1;
       min-width: 250px;
-      margin-bottom: 2rem;
+      max-width: 300px;
       text-align: center;
     }
 
@@ -97,23 +125,49 @@
       margin-bottom: 0.5rem;
     }
 
-    .featured-books {
+    .step p {
+      font-size: 0.95rem;
+    }
+
+    .how-it-works .btn-primary {
+      margin-top: 2rem;
+      background: #00bfa6;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .how-it-works .btn-primary img {
+      margin-left: 0.5rem;
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .featured-books h2 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 2rem;
       text-align: center;
+      margin-bottom: 2rem;
     }
 
     .books {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
-      margin-top: 2rem;
+      justify-content: center;
+      gap: 2rem;
     }
 
     .book {
       background: #fdf6ec;
       border-radius: 12px;
       padding: 1rem;
-      margin: 1rem;
       width: 250px;
+      text-align: center;
     }
 
     .book img {
@@ -132,53 +186,62 @@
       padding: 2rem;
       text-align: center;
       font-size: 0.9rem;
+      margin-top: 3rem;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <img src="assets/hero-illustration.png" alt="Mother reading to child illustration">
-    <h1>Books That Help Little Hearts Grow Big</h1>
-    <p>Personalized stories that build empathy, confidence, and kindness.</p>
-    <button class="btn-primary">Create Your Book <img src="start-now-arrow.png" alt="Arrow"></button>
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Books That Help Little Hearts Grow Big</h1>
+        <p>Personalized stories that build empathy, confidence, and kindness.</p>
+        <button class="btn-primary">Create Your Book <img src="assets/start-now-arrow.png" alt="Arrow" /></button>
+      </div>
+      <div class="hero-image">
+        <img src="assets/hero-illustration.png" alt="Mother reading to child illustration" />
+      </div>
+    </div>
   </header>
 
   <section class="how-it-works">
     <h2>How It Works</h2>
     <div class="steps">
       <div class="step">
-        <img src="icon-pick-character.png" alt="Pick a Character Icon">
+        <img src="assets/icon-pick-character.png" alt="Pick a Character Icon" />
         <h3>Pick a Character</h3>
-        <p>Add your child's name, appearance, and even their favorite animal.</p>
+        <p>Add your child’s name, appearance, and even their favorite animal.</p>
       </div>
       <div class="step">
-        <img src="icon-choose-lesson.png" alt="Choose a Lesson Icon">
+        <img src="assets/icon-choose-lesson.png" alt="Choose a Lesson Icon" />
         <h3>Choose a Lesson</h3>
         <p>Topics like friendship, empathy, bravery, self-regulation, and kindness.</p>
       </div>
       <div class="step">
-        <img src="icon-hardcover-book.png" alt="Hardcover Book Icon">
+        <img src="assets/icon-hardcover-book.png" alt="Hardcover Book Icon" />
         <h3>Get a Hardcover Book</h3>
         <p>Delivered to your door — designed to be read again and again.</p>
       </div>
     </div>
-    <button class="btn-primary">Start Now <img src="start-now-arrow.png" alt="Arrow"></button>
+    <div style="text-align: center;">
+      <button class="btn-primary">Start Now <img src="assets/start-now-arrow.png" alt="Arrow" /></button>
+    </div>
   </section>
 
   <section class="featured-books">
     <h2>Featured Books</h2>
     <div class="books">
       <div class="book">
-        <img src="ella-friendship-forest.png" alt="Ella and the Friendship Forest">
+        <img src="assets/ella-friendship-forest.png" alt="Ella and the Friendship Forest" />
         <h4>Ella and the Friendship Forest</h4>
       </div>
       <div class="book">
-        <img src="logan-learns-to-shine.png" alt="Logan Learns to Shine">
+        <img src="assets/logan-learns-to-shine.png" alt="Logan Learns to Shine" />
         <h4>Logan Learns to Shine</h4>
       </div>
       <div class="book">
-        <img src="ava-calms-down.png" alt="Ava Calms Down">
+        <img src="assets/ava-calms-down.png" alt="Ava Calms Down" />
         <h4>Ava Calms Down</h4>
       </div>
     </div>
