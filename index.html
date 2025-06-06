@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Growing Minds</title>
- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -16,13 +16,13 @@
     body {
       font-family: 'Nunito', sans-serif;
       background-color: #fffdf8;
-      color: #333;
+      color: #1f2d3d;
       line-height: 1.6;
     }
 
     header {
       background: #fff2d5;
-      padding: 3rem 1rem;
+      padding: 4rem 1rem;
     }
 
     .hero-container {
@@ -33,12 +33,12 @@
       max-width: 1200px;
       margin: auto;
       gap: 2rem;
+      text-align: center;
     }
 
     @media (min-width: 768px) {
       .hero-container {
         flex-direction: row;
-        align-items: center;
         text-align: left;
       }
     }
@@ -49,31 +49,35 @@
 
     .hero-text h1 {
       font-family: 'Quicksand', sans-serif;
-      font-size: 2.5rem;
+      font-size: 3rem;
+      font-weight: 700;
       margin-bottom: 1rem;
+      color: #1f2d3d;
     }
 
     .hero-text p {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
     }
 
-    .hero-text .btn-primary {
+    .btn-primary {
       background: #ff9900;
       color: #fff;
-      padding: 0.75rem 1.5rem;
+      padding: 0.9rem 1.8rem;
       border: none;
-      border-radius: 30px;
+      border-radius: 40px;
       font-size: 1rem;
+      font-weight: 600;
       cursor: pointer;
       display: inline-flex;
       align-items: center;
+      transition: background 0.3s ease;
     }
 
-    .hero-text .btn-primary img {
-      margin-left: 0.5rem;
-      width: 1rem;
-      height: 1rem;
+    .btn-primary img {
+      margin-left: 0.75rem;
+      width: 1.2rem;
+      height: 1.2rem;
     }
 
     .hero-image {
@@ -83,12 +87,12 @@
 
     .hero-image img {
       width: 100%;
-      max-width: 400px;
+      max-width: 500px;
       height: auto;
     }
 
     section {
-      padding: 3rem 1rem;
+      padding: 4rem 1rem;
       max-width: 1000px;
       margin: auto;
     }
@@ -97,31 +101,52 @@
       font-family: 'Quicksand', sans-serif;
       font-size: 2rem;
       text-align: center;
-      margin-bottom: 2rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .how-it-works h2::before {
+      content: "How it Works";
+      font-size: 1rem;
+      background-color: #d8f4f1;
+      color: #00303f;
+      font-weight: 600;
+      display: block;
+      width: fit-content;
+      margin: 0 auto 1rem;
+      padding: 0.4rem 1.2rem;
+      border-radius: 999px;
+      font-family: 'Quicksand', sans-serif;
     }
 
     .steps {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 2rem;
+      justify-content: center;
+      gap: 3rem;
     }
 
     .step {
       flex: 1;
-      min-width: 250px;
-      max-width: 300px;
+      min-width: 220px;
+      max-width: 280px;
       text-align: center;
     }
 
     .step img {
-      width: 80px;
-      height: 80px;
+      width: 90px;
+      height: 90px;
       margin-bottom: 1rem;
+      background-color: #d8f4f1;
+      border-radius: 50%;
+      padding: 1rem;
     }
 
     .step h3 {
       font-size: 1.2rem;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
       margin-bottom: 0.5rem;
     }
 
@@ -130,22 +155,8 @@
     }
 
     .how-it-works .btn-primary {
-      margin-top: 2rem;
+      margin-top: 3rem;
       background: #00bfa6;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-    }
-
-    .how-it-works .btn-primary img {
-      margin-left: 0.5rem;
-      width: 1rem;
-      height: 1rem;
     }
 
     .featured-books h2 {
@@ -164,21 +175,23 @@
 
     .book {
       background: #fdf6ec;
-      border-radius: 12px;
+      border-radius: 20px;
       padding: 1rem;
       width: 250px;
       text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
 
     .book img {
       width: 100%;
       height: auto;
-      border-radius: 8px;
+      border-radius: 12px;
     }
 
     .book h4 {
       font-size: 1.1rem;
-      margin-top: 0.5rem;
+      margin-top: 0.75rem;
+      font-weight: 600;
     }
 
     footer {
@@ -195,7 +208,7 @@
   <header>
     <div class="hero-container">
       <div class="hero-text">
-        <h1>Books That Help Little Heart Grow Big</h1>
+        <h1>Books That Help Little Hearts Grow Big</h1>
         <p>Personalized stories that build empathy, confidence, and kindness.</p>
         <button class="btn-primary">Create Your Book <img src="assets/start-now-arrow.png" alt="Arrow" /></button>
       </div>
