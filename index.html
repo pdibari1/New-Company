@@ -1,194 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Growing Minds</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      background-color: #FFF3D6;
-      color: #1A1A1A;
-    }
-
-    .header {
-      position: relative;
-      background-color: #FFD55A;
-      padding: 4rem 1rem 8rem;
-      text-align: center;
-    }
-
-    .header h1 {
-      font-size: 2.5rem;
-      margin: 0 0 1rem;
-    }
-
-    .header p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-
-    .header .btn {
-      background-color: #FFA629;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    .wave {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .how-it-works {
-      background-color: #FFF3D6;
-      padding: 4rem 1rem;
-      text-align: center;
-    }
-
-    .how-it-works h2 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .steps {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .step {
-      max-width: 300px;
-    }
-
-    .step h3 {
-      font-size: 1.2rem;
-      margin: 1rem 0 0.5rem;
-    }
-
-    .step p {
-      font-size: 1rem;
-    }
-
-    .btn-start {
-      margin-top: 2rem;
-      background-color: #00B4B3;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    .featured-books {
-      background-color: #FFF;
-      padding: 4rem 1rem;
-      text-align: center;
-    }
-
-    .featured-books h2 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    .book-cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    .book-card {
-      background-color: #FFF3D6;
-      border-radius: 16px;
-      width: 200px;
-      padding: 1rem;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .book-card img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    .book-card h4 {
-      margin: 0.5rem 0 0;
-      font-size: 1rem;
-    }
-
-    @media(min-width: 768px) {
-      .steps {
-        flex-direction: row;
-        justify-content: center;
-      }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <div class="header">
-    <h1>Books That Help Little Hearts Grow Big</h1>
-    <p>Personalized stories that build empathy, confidence, and kindness.</p>
-    <button class="btn">Create Your Book</button>
 
-    <svg class="wave" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-      <path fill="#FFF3D6" d="M0,224 C360,320 1080,128 1440,224 L1440,320 L0,320 Z"></path>
-    </svg>
-  </div>
-
-  <section class="how-it-works">
-    <h2>How It Works</h2>
-    <div class="steps">
-      <div class="step">
-        <img src="assets/character-icon.png" alt="Pick a Character" />
-        <h3>Pick a Character</h3>
-        <p>Add your child’s name, appearance, and even their favorite animal.</p>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-image">
+        <img src="assets/hero-character.png" alt="Happy character illustration" />
       </div>
-      <div class="step">
-        <img src="assets/lesson-icon.png" alt="Choose a Lesson" />
-        <h3>Choose a Lesson</h3>
-        <p>Topics like friendship, empathy, bravery, self-regulation, and kindness.</p>
-      </div>
-      <div class="step">
-        <img src="assets/hardcover-icon.png" alt="Get a Hardcover Book" />
-        <h3>Get a Hardcover Book</h3>
-        <p>Delivered to your door — designed to be read again and again.</p>
+      <div class="hero-text">
+        <h1>Personalized Hardcover Books for Your Growing Child</h1>
+        <p>Help your child through important milestones with a story that's all about them.</p>
+        <button class="button">Create Your Book</button>
       </div>
     </div>
-    <button class="btn-start">Start Now</button>
   </section>
 
+  <!-- HOW IT WORKS SECTION -->
+  <section class="how-it-works">
+    <div class="step">
+      <img src="assets/character-icon.png" alt="Choose character" />
+      <h3>Choose Your Character</h3>
+      <p>Pick skin tone, hair, name, and more.</p>
+    </div>
+    <div class="step">
+      <img src="assets/story-icon.png" alt="Pick a story" />
+      <h3>Select a Milestone</h3>
+      <p>From potty training to making friends—we’ve got it covered.</p>
+    </div>
+    <div class="step">
+      <img src="assets/book-icon.png" alt="Receive book" />
+      <h3>Get Your Book</h3>
+      <p>Printed and shipped in a beautiful hardcover edition.</p>
+    </div>
+  </section>
+
+  <!-- FEATURED BOOKS SECTION -->
   <section class="featured-books">
     <h2>Featured Books</h2>
-    <div class="book-cards">
+    <div class="books-container">
       <div class="book-card">
-        <img src="assets/ella-book.png" alt="Ella and the Friendship Forest">
-        <h4>Ella and the Friendship Forest</h4>
+        <img src="assets/book1.jpg" alt="Book cover 1" />
+        <div class="info">
+          <h4>Big Kid Bed</h4>
+          <p>Help your child feel confident moving into a new bed.</p>
+        </div>
       </div>
       <div class="book-card">
-        <img src="assets/logan-book.png" alt="Logan Learns to Shine">
-        <h4>Logan Learns to Shine</h4>
-      </div>
-      <div class="book-card">
-        <img src="assets/ava-book.png" alt="Ava Calms Down">
-        <h4>Ava Calms Down</h4>
+        <img src="assets/book2.jpg" alt="Book cover 2" />
+        <div class="info">
+          <h4>Making Friends</h4>
+          <p>Teach empathy and social courage with a custom adventure.</p>
+        </div>
       </div>
     </div>
   </section>
-</body>
 
+</body>
 </html>
