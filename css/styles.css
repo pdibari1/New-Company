@@ -1,16 +1,20 @@
-/* Reset and base styles */
+/* ===== GLOBAL STYLES ===== */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
   font-family: 'Quicksand', sans-serif;
-  background-color: #fffdf8;
-  color: #2a2a2a;
+  color: #1e1e1e;
+  background-color: #ffffff;
   line-height: 1.6;
-  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 img {
@@ -19,165 +23,149 @@ img {
   display: block;
 }
 
-/* Header Section */
-header {
-  background-color: #fff2d5;
-  padding: 80px 20px;
-}
-
+/* ===== HERO SECTION ===== */
 .hero {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 2rem;
+  background-color: #fff2cc;
+  padding: 4rem 1rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.hero-text {
-  flex: 1;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
+.hero h1 {
+  font-size: 2.5rem;
   font-weight: 700;
-  color: #1f2d3d;
   margin-bottom: 1rem;
 }
 
-.hero-text p {
+.hero p {
   font-size: 1.25rem;
-  margin-bottom: 2rem;
-  color: #444;
+  max-width: 600px;
+  margin: 0 auto 2rem;
 }
 
 .button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: #ff9900;
-  color: white;
+  background-color: #fca311;
+  color: #fff;
   padding: 1rem 2rem;
-  border: none;
-  border-radius: 40px;
-  font-size: 1rem;
   font-weight: 600;
+  border-radius: 1rem;
+  border: none;
   cursor: pointer;
-  text-decoration: none;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s;
 }
 
 .button:hover {
-  background-color: #e88700;
+  background-color: #e48d00;
 }
 
-/* Responsive two-column layout */
-@media (min-width: 768px) {
-  .hero {
-    flex-direction: row;
-    text-align: left;
-  }
+/* Curved break using SVG */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url('images/wave-break.svg') no-repeat center bottom;
+  background-size: cover;
+  z-index: 1;
 }
 
-/* How It Works Section */
+/* ===== HOW IT WORKS SECTION ===== */
 .how-it-works {
-  padding: 60px 20px;
-  background: #ffffff;
-  text-align: center;
-}
-
-.how-it-works h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  color: #1f2d3d;
-}
-
-.steps {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
   gap: 2rem;
-  justify-content: center;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+  background-color: #ffffff;
 }
 
 .step {
-  background: #f9f9f9;
-  border-radius: 20px;
-  padding: 2rem;
-  max-width: 280px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  max-width: 300px;
 }
 
 .step img {
-  background: #d8f4f1;
-  padding: 1rem;
-  border-radius: 50%;
   width: 80px;
-  height: 80px;
-  object-fit: contain;
   margin-bottom: 1rem;
 }
 
 .step h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 600;
   margin-bottom: 0.5rem;
-  color: #1f2d3d;
 }
 
-.step p {
-  font-size: 0.95rem;
-  color: #444;
-}
-
-/* Featured Books */
+/* ===== FEATURED BOOKS SECTION ===== */
 .featured-books {
-  padding: 60px 20px;
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
 .featured-books h2 {
   font-size: 2rem;
-  font-weight: 700;
   margin-bottom: 2rem;
-  color: #1f2d3d;
 }
 
-.books {
+.books-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
-.book {
-  background: #fff5e6;
-  border-radius: 20px;
-  padding: 1.5rem;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+.book-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 250px;
+  text-align: left;
 }
 
-.book img {
-  border-radius: 12px;
-  margin-bottom: 1rem;
+.book-card img {
+  width: 100%;
+  border-bottom: 4px solid #fca311;
 }
 
-.book h4 {
-  font-size: 1.1rem;
+.book-card .info {
+  padding: 1rem;
+}
+
+.book-card h4 {
+  font-size: 1.25rem;
   font-weight: 600;
-  color: #2a2a2a;
+  margin-bottom: 0.5rem;
 }
 
-/* Footer */
-footer {
-  background-color: #fff2d5;
-  padding: 2rem 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #444;
-  margin-top: 3rem;
+.book-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .how-it-works,
+  .books-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .step,
+  .book-card {
+    max-width: 90%;
+  }
 }
