@@ -1,20 +1,15 @@
-/* ===== GLOBAL STYLES ===== */
+/* ===== Global ===== */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
-  color: #1e1e1e;
-  background-color: #ffffff;
+  font-family: 'Nunito', sans-serif;
+  background-color: #fffdf8;
+  color: #1f2d3d;
   line-height: 1.6;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 img {
@@ -23,149 +18,200 @@ img {
   display: block;
 }
 
-/* ===== HERO SECTION ===== */
-.hero {
-  background-color: #fff2cc;
-  padding: 4rem 1rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
+/* ===== Hero Section ===== */
+.hero {
+  background: #fff2d5;
+  padding: 4rem 1rem 0;
+  position: relative;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: #1f2d3d;
 }
 
-.hero p {
-  font-size: 1.25rem;
-  max-width: 600px;
-  margin: 0 auto 2rem;
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
-.button {
-  background-color: #fca311;
+.btn-primary {
+  background: #ff9900;
   color: #fff;
-  padding: 1rem 2rem;
-  font-weight: 600;
-  border-radius: 1rem;
+  padding: 0.9rem 1.8rem;
   border: none;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.3s ease;
 }
 
-.button:hover {
-  background-color: #e48d00;
+.btn-primary:hover {
+  background: #e68500;
 }
 
-/* Curved bottom SVG directly below hero */
+.btn-primary img {
+  margin-left: 0.75rem;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+}
+
 .header-curve {
   display: block;
   width: 100%;
   height: auto;
-  margin-top: -1px;
+  margin-top: -5px;
 }
 
-/* REMOVE old pseudo-element that used wave-break.svg */
-.hero::after {
-  content: none;
+@media (min-width: 768px) {
+  .hero-container {
+    flex-direction: row;
+    text-align: left;
+  }
 }
 
-/* ===== HOW IT WORKS SECTION ===== */
-.how-it-works {
+/* ===== How It Works ===== */
+section {
+  padding: 4rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.how-it-works h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.how-it-works h2::before {
+  content: "How it Works";
+  font-size: 1rem;
+  background-color: #d8f4f1;
+  color: #00303f;
+  font-weight: 600;
+  display: block;
+  width: fit-content;
+  margin: 0 auto 1rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.steps {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  gap: 2rem;
-  padding: 4rem 2rem;
   flex-wrap: wrap;
-  background-color: #ffffff;
+  justify-content: center;
+  gap: 3rem;
 }
 
 .step {
-  text-align: center;
   flex: 1;
-  max-width: 300px;
+  min-width: 220px;
+  max-width: 280px;
+  text-align: center;
 }
 
 .step img {
-  width: 80px;
+  width: 90px;
+  height: 90px;
   margin-bottom: 1rem;
-}
-
-.step h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-/* ===== FEATURED BOOKS SECTION ===== */
-.featured-books {
-  background-color: #f9f9f9;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.featured-books h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-}
-
-.books-container {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.book-card {
-  background-color: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  max-width: 250px;
-  text-align: left;
-}
-
-.book-card img {
-  width: 100%;
-  border-bottom: 4px solid #fca311;
-}
-
-.book-card .info {
+  background-color: #d8f4f1;
+  border-radius: 50%;
   padding: 1rem;
 }
 
-.book-card h4 {
-  font-size: 1.25rem;
-  font-weight: 600;
+.step h3 {
+  font-size: 1.2rem;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
-.book-card p {
-  font-size: 1rem;
-  color: #555;
+.step p {
+  font-size: 0.95rem;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 768px) {
-  .how-it-works,
-  .books-container {
-    flex-direction: column;
-    align-items: center;
-  }
+.center-button {
+  text-align: center;
+  margin-top: 3rem;
+}
 
-  .hero h1 {
-    font-size: 2rem;
-  }
+.how-it-works .btn-primary {
+  background: #00bfa6;
+}
 
-  .hero p {
-    font-size: 1rem;
-  }
+/* ===== Featured Books ===== */
+.featured-books h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
 
-  .step,
-  .book-card {
-    max-width: 90%;
-  }
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.book {
+  background: #fdf6ec;
+  border-radius: 20px;
+  padding: 1rem;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.book img {
+  border-radius: 12px;
+}
+
+.book h4 {
+  font-size: 1.1rem;
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #fff2d5;
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 3rem;
 }
