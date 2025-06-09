@@ -1,85 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Story Characters Form</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; max-width: 700px; margin: auto; }
-    .section { margin-bottom: 20px; }
-    .character-group { margin-left: 20px; margin-top: 10px; }
-    label { display: block; margin: 5px 0 2px; }
-    input, select, button { padding: 5px; width: 100%; max-width: 300px; margin-bottom: 10px; }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Growing Minds - Personalized Story Form</title>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* Reset and base styles */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    background: #f9fafc;
+    color: #1e1e1e;
+  }
+
+  header {
+    background: #3c91e6;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    color: white;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 2.8rem;
+  }
+  header p {
+    margin-top: 0.4rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+
+  main {
+    max-width: 700px;
+    margin: 3rem auto 5rem;
+    background: white;
+    padding: 2.5rem 3rem;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+  }
+
+  form > div {
+    margin-bottom: 1.8rem;
+  }
+  label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  input[type="text"],
+  input[type="number"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.9rem 1.1rem;
+    border: 2px solid #d6d9dc;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-family: 'Quicksand', sans-serif;
+    transition: border-color 0.3s ease;
+  }
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #3c91e6;
+  }
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  button {
+    background-color: #3c91e6;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 1.2rem 2rem;
+    font-weight: 700;
+    font-size: 1.15rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  button:hover,
+  button:focus {
+    background-color: #337acc;
+  }
+
+  @media (max-width: 480px) {
+    main {
+      margin: 2rem 1rem 3rem;
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>
 </head>
 <body>
 
-  <h2>Story Character Form</h2>
+<header>
+  <h1>Growing Minds</h1>
+  <p>Personalized stories to help your child grow</p>
+</header>
 
-  <form action="https://formspree.io/f/movdeqjv" method="POST" id="storyForm">
-    
-    <!-- Main Characters Section -->
-    <div class="section">
-      <label for="mainCount">How many characters are in your story?</label>
-      <select id="mainCount" name="main_character_count" onchange="renderMainCharacters()" required>
-        <option value="">Select</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-      </select>
-      <div id="mainCharacters" class="character-group"></div>
+<main>
+  <form action="/submit" method="POST" novalidate>
+    <div>
+      <label for="childName">Child's Name</label>
+      <input type="text" id="childName" name="childName" required placeholder="e.g. Benjamin" />
     </div>
 
-    <!-- Main Character Location -->
-    <div class="section">
-      <label for="mainLocation">Where does the main character live?</label>
-      <input type="text" id="mainLocation" name="main_character_location" required />
+    <div>
+      <label for="childAge">Child's Age</label>
+      <input type="number" id="childAge" name="childAge" min="1" max="18" required placeholder="e.g. 6" />
     </div>
 
-    <!-- Secondary Characters Section -->
-    <div class="section">
-      <label for="secondaryCount">How many secondary characters are there?</label>
-      <select id="secondaryCount" name="secondary_character_count" onchange="renderSecondaryCharacters()" required>
-        <option value="">Select</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
+    <div>
+      <label for="childGender">Child's Gender</label>
+      <select id="childGender" name="childGender" required>
+        <option value="" disabled selected>Select gender</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+        <option value="nonbinary">Non-binary</option>
+        <option value="prefer_not_to_say">Prefer not to say</option>
       </select>
-      <div id="secondaryCharacters" class="character-group"></div>
+    </div>
+
+    <div>
+      <label for="childEthnicity">Child's Ethnicity</label>
+      <input type="text" id="childEthnicity" name="childEthnicity" placeholder="e.g. Hispanic, Asian, African American, etc." />
+    </div>
+
+    <div>
+      <label for="siblingsFriends">Any other siblings or friends that should be in the story</label>
+      <input type="text" id="siblingsFriends" name="siblingsFriends" placeholder="Names or descriptions" />
+    </div>
+
+    <div>
+      <label for="childDescription">Tell us as much as you can about your child</label>
+      <textarea id="childDescription" name="childDescription" required placeholder="What they look like, prominent traits like kindness, braveness, etc."></textarea>
+    </div>
+
+    <div>
+      <label for="childSurroundings">Tell us as much as you can about your child's surroundings</label>
+      <textarea id="childSurroundings" name="childSurroundings" required placeholder="Apartment or house, rural? City? Special aspects like an oak tree, loud dog next door, etc."></textarea>
+    </div>
+
+    <div>
+      <label for="developmentArea">Tell us as much as you can about the development area your child needs help tackling</label>
+      <textarea id="developmentArea" name="developmentArea" required placeholder="Biting, The Golden Rule, Being Brave, Making Friends, etc."></textarea>
+    </div>
+
+    <div>
+      <label for="anythingElse">Anything else you'd like us to know</label>
+      <textarea id="anythingElse" name="anythingElse" placeholder="Additional info or requests"></textarea>
     </div>
 
     <button type="submit">Submit</button>
   </form>
-
-  <script>
-    function renderMainCharacters() {
-      const count = parseInt(document.getElementById('mainCount').value);
-      const container = document.getElementById('mainCharacters');
-      container.innerHTML = '';
-
-      for (let i = 1; i <= count; i++) {
-        container.innerHTML += `
-          <strong>Main Character ${i}</strong>
-          <label>Name:</label><input type="text" name="main_character_${i}_name" required />
-          <label>Age:</label><input type="number" name="main_character_${i}_age" required />
-        `;
-      }
-    }
-
-    function renderSecondaryCharacters() {
-      const count = parseInt(document.getElementById('secondaryCount').value);
-      const container = document.getElementById('secondaryCharacters');
-      container.innerHTML = '';
-
-      for (let i = 1; i <= count; i++) {
-        container.innerHTML += `
-          <strong>Secondary Character ${i}</strong>
-          <label>Name:</label><input type="text" name="secondary_character_${i}_name" required />
-          <label>Age:</label><input type="number" name="secondary_character_${i}_age" required />
-          <label>Relationship to main character(s):</label>
-          <input type="text" name="secondary_character_${i}_relationship" required />
-        `;
-      }
-    }
-  </script>
+</main>
 
 </body>
 </html>
