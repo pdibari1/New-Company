@@ -59,6 +59,12 @@ img {
   background-color: #e48d00;
 }
 
+.header-curve {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: -1px;
+}
 /* Curved break using SVG */
 .hero::after {
   content: '';
