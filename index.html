@@ -1,84 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Growing Minds</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <header class="header">
-    <div class="container">
-      <img src="images/logo.png" alt="Growing Minds Logo" class="logo">
-      <nav>
-        <ul class="nav-list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#how-it-works">How it Works</a></li>
-          <li><a href="#featured-book">Featured Book</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container hero-content">
+  <header class="hero">
+    <div class="hero-container">
       <div class="hero-text">
-        <h1>Books that Grow with Your Child</h1>
-        <p>Personalized hardcover stories that support your child’s emotional development every step of the way.</p>
-        <a href="#" class="btn-primary">Create Your Book</a>
+        <h1>Books That Help Little Hearts Grow Big</h1>
+        <p>Personalized stories that build empathy, confidence, and kindness.</p>
+        <button class="btn-primary">
+          Create Your Book <img src="assets/start-now-arrow.png" alt="Arrow" />
+        </button>
       </div>
       <div class="hero-image">
-        <img src="images/hero-illustration.png" alt="Illustration of child reading" />
+        <img src="assets/hero-illustration.png" alt="Mother reading to child illustration" />
+      </div>
+    </div>
+    <svg class="header-curve" viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path fill="#fffdf8" d="M0,0 C480,150 960,0 1440,150 L1440,0 L0,0 Z"/>
+    </svg>
+  </header>
+
+  <section class="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <img src="assets/icon-pick-character.png" alt="Pick a Character Icon" />
+        <h3>Pick a Character</h3>
+        <p>Add your child’s name, appearance, and even their favorite animal.</p>
+      </div>
+      <div class="step">
+        <img src="assets/icon-choose-lesson.png" alt="Choose a Lesson Icon" />
+        <h3>Choose a Lesson</h3>
+        <p>Topics like friendship, empathy, bravery, self-regulation, and kindness.</p>
+      </div>
+      <div class="step">
+        <img src="assets/icon-hardcover-book.png" alt="Hardcover Book Icon" />
+        <h3>Get a Hardcover Book</h3>
+        <p>Delivered to your door — designed to be read again and again.</p>
+      </div>
+    </div>
+    <div class="center-button">
+      <button class="btn-primary">Start Now <img src="assets/start-now-arrow.png" alt="Arrow" /></button>
+    </div>
+  </section>
+
+  <section class="featured-books">
+    <h2>Featured Books</h2>
+    <div class="books">
+      <div class="book">
+        <img src="assets/ella-friendship-forest.png" alt="Ella and the Friendship Forest" />
+        <h4>Ella and the Friendship Forest</h4>
+      </div>
+      <div class="book">
+        <img src="assets/logan-learns-to-shine.png" alt="Logan Learns to Shine" />
+        <h4>Logan Learns to Shine</h4>
+      </div>
+      <div class="book">
+        <img src="assets/ava-calms-down.png" alt="Ava Calms Down" />
+        <h4>Ava Calms Down</h4>
       </div>
     </div>
   </section>
 
-  <section class="how-it-works" id="how-it-works">
-    <div class="container">
-      <h2>How It Works</h2>
-      <div class="steps">
-        <div class="step">
-          <img src="images/step1.png" alt="Step 1 icon">
-          <h3>Pick a Milestone</h3>
-          <p>Choose a key moment in your child’s development.</p>
-        </div>
-        <div class="step">
-          <img src="images/step2.png" alt="Step 2 icon">
-          <h3>Personalize the Story</h3>
-          <p>Add your child’s name, favorite things, and more.</p>
-        </div>
-        <div class="step">
-          <img src="images/step3.png" alt="Step 3 icon">
-          <h3>Receive a Keepsake</h3>
-          <p>We print and ship a beautiful hardcover book to your door.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="featured-book" id="featured-book">
-    <div class="container featured-content">
-      <div class="book-image">
-        <img src="images/featured-book.png" alt="Featured Book Cover">
-      </div>
-      <div class="book-text">
-        <h2>Featured Book</h2>
-        <h3>Ella and the Friendship Forest</h3>
-        <p>Ella learns the power of kindness, empathy, and making new friends as she explores a magical forest filled with charming creatures and fun challenges.</p>
-        <a href="#" class="btn-secondary">Learn More</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer" id="contact">
-    <div class="container">
-      <p>&copy; 2025 Growing Minds. All rights reserved.</p>
-    </div>
+  <footer>
+    <p>For every 10 books sold, we donate 1 to a school or shelter.</p>
+    <p>&copy; 2025 Bright Minds Books. All rights reserved.</p>
   </footer>
 </body>
-
 </html>
