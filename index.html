@@ -6,6 +6,49 @@
   <title>Growing Minds</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    .hero-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .hero-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .hero-image img {
+        max-width: 80%;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -19,7 +62,7 @@
         </a>
       </div>
       <div class="hero-image">
-        <img src="assets/hero-illustration.png" alt="Mother reading to child illustration" style="max-width: 100%; height: auto;" />
+        <img src="assets/hero-illustration.png" alt="Mother reading to child illustration" />
       </div>
     </div>
     <svg class="header-curve" viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
