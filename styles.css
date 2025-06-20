@@ -23,6 +23,37 @@ a {
   color: inherit;
 }
 
+/* ===== Header Menu ===== */
+.header-menu {
+  background-color: #fffdf8;
+  padding: 10px 20px;
+}
+
+.header-menu ul {
+  list-style: none;
+  display: flex; /* Makes the menu horizontal */
+  justify-content: center; /* Centers the menu items */
+  gap: 20px; /* Adds spacing between menu items */
+  margin: 0;
+  padding: 0;
+}
+
+.header-menu li {
+  font-family: 'Quicksand', sans-serif; /* Matches the page font */
+  font-size: 0.9rem; /* Smaller size for the menu */
+  font-weight: 600; /* Semi-bold for visibility */
+}
+
+.header-menu a {
+  text-decoration: none;
+  color: #333; /* Matches the text color of the page */
+  transition: color 0.3s ease;
+}
+
+.header-menu a:hover {
+  color: #f4a261; /* Adds hover effect for interactivity */
+}
+
 /* ===== Hero Section ===== */
 .hero {
   background: #fff2d5;
