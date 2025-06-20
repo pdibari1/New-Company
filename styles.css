@@ -50,27 +50,31 @@ a {
 }
 
 .hero-text h1 {
-  font-family: 'Quicksand', sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  color: #333;
+  font-family: 'Nunito', sans-serif; /* Matches the mockup font */
+  font-size: 3rem; /* Adjusted size to match the mockup */
+  font-weight: 700; /* Bold text for emphasis */
+  color: #333; /* Dark color for readability */
   margin-bottom: 1rem;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-family: 'Quicksand', sans-serif; /* Matches the mockup font */
+  font-size: 1.2rem; /* Slightly smaller for supporting text */
+  font-weight: 400; /* Regular weight for body text */
+  color: #666; /* Lighter color for contrast */
   margin-bottom: 1.5rem;
-  color: #666;
 }
 
 .btn-primary {
+  font-family: 'Quicksand', sans-serif; /* Matches the mockup font */
+  font-size: 1rem; /* Button text size */
+  font-weight: 600; /* Semi-bold for visibility */
   display: inline-block;
-  background-color: #f4a261;
-  color: #fff;
+  background-color: #f4a261; /* Button color from the mockup */
+  color: #fff; /* White text for contrast */
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
-  font-size: 1rem;
   margin-top: 10px;
   cursor: pointer;
   transition: background 0.3s ease;
