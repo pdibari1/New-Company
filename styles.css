@@ -141,24 +141,22 @@ a {
 
 .steps {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  align-items: center; /* Centers images and text vertically */
+  gap: 20px; /* Adds spacing between steps */
+  flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
 }
 
 .step {
-  flex: 1;
-  max-width: 300px;
-  text-align: center;
+  text-align: center; /* Centers text below the image */
+  max-width: 300px; /* Ensures consistent width for each step */
+  margin: auto; /* Centers each step horizontally */
 }
 
 .step img {
-  max-width: 100px;
-  height: auto;
-  margin-bottom: 1rem;
-  background-color: #d8f4f1;
-  border-radius: 50%;
-  padding: 1rem;
+  display: block; /* Ensures the image is treated as a block element */
+  margin: 0 auto 10px; /* Centers the image and adds spacing below it */
+  max-width: 100px; /* Ensures consistent image size */
 }
 
 .step h3 {
