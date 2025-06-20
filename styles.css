@@ -39,27 +39,27 @@ a {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 20px;
 }
 
 .hero-text {
-  max-width: 500px;
+  max-width: 50%;
 }
 
 .hero-text h1 {
   font-family: 'Quicksand', sans-serif;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
-  color: #1f2d3d;
+  color: #333;
   margin-bottom: 1rem;
 }
 
 .hero-text p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: #666;
 }
 
@@ -86,8 +86,12 @@ a {
   height: 1.1rem;
 }
 
+.hero-image {
+  max-width: 50%;
+}
+
 .hero-image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -233,14 +237,16 @@ footer {
 @media (max-width: 768px) {
   .hero-container {
     flex-direction: column;
+    text-align: center;
   }
 
-  .hero-text h1 {
-    font-size: 1.8rem;
+  .hero-text {
+    max-width: 100%;
+    margin-bottom: 20px;
   }
 
-  .hero-text p {
-    font-size: 1rem;
+  .hero-image {
+    max-width: 80%;
   }
 
   .steps {
