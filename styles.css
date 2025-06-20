@@ -144,15 +144,12 @@ a {
 .steps {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Aligns icons and text at the top */
-  gap: 40px; /* Adds spacing between steps */
+  align-items: center; /* Centers images and text vertically */
+  gap: 20px; /* Adds spacing between steps */
   flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
 }
 
 .step {
-  display: flex;
-  align-items: center; /* Aligns icon and text horizontally */
-  gap: 20px; /* Adds spacing between icon and text */
   text-align: center; /* Centers text below the image */
   max-width: 300px; /* Ensures consistent width for each step */
   margin: auto; /* Centers each step horizontally */
