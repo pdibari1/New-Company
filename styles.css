@@ -107,6 +107,8 @@ a {
 }
 
 .how-it-works {
+  margin-top: -50px; /* Adjusts overlap with the curve */
+  padding-top: 80px; /* Adds spacing inside the section */
   padding: 40px 20px;
   text-align: center;
 }
