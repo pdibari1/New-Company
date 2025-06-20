@@ -25,15 +25,22 @@ a {
 
 /* ===== Header Menu ===== */
 .header-menu {
-  background-color: #fff2d5; /* Matches the header background color */
+  display: flex;
+  justify-content: space-between; /* Aligns logo and menu items */
+  align-items: center;
+  background-color: #fff2d5;
   padding: 10px 20px;
+}
+
+.logo img {
+  max-width: 100px; /* Adjust size of the logo */
+  height: auto;
 }
 
 .header-menu ul {
   list-style: none;
-  display: flex; /* Makes the menu horizontal */
-  justify-content: center; /* Centers the menu items */
-  gap: 20px; /* Adds spacing between menu items */
+  display: flex;
+  gap: 20px;
   margin: 0;
   padding: 0;
 }
