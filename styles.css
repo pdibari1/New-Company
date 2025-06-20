@@ -207,24 +207,23 @@ a {
 }
 
 .book {
-  background: #fdf6ec;
-  border-radius: 20px;
-  padding: 1rem;
-  width: 250px;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center; /* Centers the text below the image */
+  max-width: 250px; /* Ensures consistent width for each book */
+  margin: auto; /* Centers each book horizontally */
 }
 
 .book img {
-  max-width: 150px;
+  display: block; /* Ensures the image is treated as a block element */
+  margin: 0 auto; /* Centers the image horizontally */
+  max-width: 150px; /* Ensures consistent image size */
   height: auto;
-  border-radius: 12px;
 }
 
-.book h4 {
+.book h3 {
   font-size: 1.1rem;
   margin-top: 0.75rem;
   font-weight: 600;
+  color: #333;
 }
 
 /* ===== Footer ===== */
