@@ -28,7 +28,7 @@ a {
   display: flex;
   justify-content: space-between; /* Positions logo on the left and menu on the right */
   align-items: center;
-  background-color: #fff2d5;
+  background-color: #fff2d5; /* Background color for the header */
   padding: 10px 20px;
 }
 
@@ -90,6 +90,7 @@ a {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 40px 20px;
+  background-color: #fff2d5; /* Background color for the hero container */
 }
 
 .hero-text {
@@ -151,6 +152,7 @@ a {
   width: 100%;
   height: auto;
   margin-top: -5px;
+  background-color: #fff2d5; /* Ensures the curve matches the hero background */
 }
 
 .how-it-works {
