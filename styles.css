@@ -32,6 +32,15 @@ a {
   padding: 10px 20px;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
 .logo img {
   max-width: 100px; /* Adjust size of the logo */
   height: auto;
