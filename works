@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works - Growing Minds</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <nav class="header-menu">
+      <div class="logo">
+        <img src="assets/gm-logo.png" alt="Growing Minds Logo" />
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="#about-us">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>How It Works</h1>
+        <p>Creating your personalized book is as easy as 1-2-3!</p>
+        <a href="form.html" class="btn-primary">Start Your Book</a>
+      </div>
+      <div class="hero-image">
+        <img src="assets/hero-illustration.png" alt="Mother reading to child illustration" />
+      </div>
+    </div>
+    <svg class="header-curve" viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path fill="#fffdf8" d="M0,100 C480,200 960,0 1440,100 L1440,200 L0,200 Z"/>
+    </svg>
+  </header>
+
+  <section class="how-it-works">
+    <h2>Just 3 Simple Steps</h2>
+    <div class="steps">
+      <div class="step">
+        <img src="assets/icon-form.png" alt="Form Icon" />
+        <div class="step-text">
+          <h3>Fill Out Our Easy Form</h3>
+          <p>Share your child’s name, features, and story preferences.</p>
+        </div>
+      </div>
+      <div class="step">
+        <img src="assets/icon-email-summary.png" alt="Email Summary Icon" />
+        <div class="step-text">
+          <h3>Receive a Story Summary In Your Email</h3>
+          <p>We'll send you a personalized summary to review.</p>
+        </div>
+      </div>
+      <div class="step">
+        <img src="assets/icon-checkout.png" alt="Approve and Purchase Icon" />
+        <div class="step-text">
+          <h3>Approve and Purchase Your Hardcover Book</h3>
+          <p>Make it official and we’ll ship it to your door!</p>
+        </div>
+      </div>
+    </div>
+    <div class="center-button">
+      <a href="form.html" class="btn-primary">Create Your Book</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>For every 10 books sold, we donate 1 to a school or shelter.</p>
+    <p>&copy; 2025 Growing Minds Books. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
