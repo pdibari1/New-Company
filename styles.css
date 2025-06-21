@@ -24,9 +24,9 @@ a {
 }
 
 /* ===== Header Menu ===== */
-.header-menu {
+.header {
   display: flex;
-  justify-content: space-between; /* Aligns logo and menu items */
+  justify-content: space-between; /* Positions logo on the left and menu on the right */
   align-items: center;
   background-color: #fff2d5;
   padding: 10px 20px;
@@ -48,21 +48,21 @@ a {
 
 .header-menu ul {
   list-style: none;
-  display: flex;
-  gap: 20px;
+  display: flex; /* Makes the menu horizontal */
+  gap: 20px; /* Adds spacing between menu items */
   margin: 0;
   padding: 0;
 }
 
 .header-menu li {
-  font-family: 'Quicksand', sans-serif; /* Matches the page font */
+  font-family: 'Quicksand', sans-serif;
   font-size: 0.9rem; /* Smaller size for the menu */
-  font-weight: 600; /* Semi-bold for visibility */
+  font-weight: 600;
 }
 
 .header-menu a {
   text-decoration: none;
-  color: #333; /* Matches the text color of the page */
+  color: #333;
   transition: color 0.3s ease;
 }
 
