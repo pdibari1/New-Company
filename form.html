@@ -1,170 +1,53 @@
-out<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Growing Minds - Personalized Story Form</title>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet" />
-<style>
-  /* Reset and base styles */
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    font-family: 'Quicksand', sans-serif;
-    background: #f9fafc;
-    color: #1e1e1e;
-  }
-
-  header {
-    background: #3c91e6;
-    padding: 2.5rem 1rem;
-    text-align: center;
-    color: white;
-  }
-  header h1 {
-    margin: 0;
-    font-weight: 700;
-    font-size: 2.8rem;
-  }
-  header p {
-    margin-top: 0.4rem;
-    font-weight: 400;
-    font-size: 1.2rem;
-    opacity: 0.9;
-  }
-
-  main {
-    max-width: 700px;
-    margin: 3rem auto 5rem;
-    background: white;
-    padding: 2.5rem 3rem;
-    border-radius: 14px;
-    box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
-  }
-
-  form > div {
-    margin-bottom: 1.8rem;
-  }
-  label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #333;
-  }
-  input[type="text"],
-  input[type="number"],
-  select,
-  textarea {
-    width: 100%;
-    padding: 0.9rem 1.1rem;
-    border: 2px solid #d6d9dc;
-    border-radius: 10px;
-    font-size: 1.05rem;
-    font-family: 'Quicksand', sans-serif;
-    transition: border-color 0.3s ease;
-  }
-  input[type="text"]:focus,
-  input[type="number"]:focus,
-  select:focus,
-  textarea:focus {
-    outline: none;
-    border-color: #3c91e6;
-  }
-  textarea {
-    resize: vertical;
-    min-height: 120px;
-  }
-
-  button {
-    background-color: #3c91e6;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    padding: 1.2rem 2rem;
-    font-weight: 700;
-    font-size: 1.15rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-  }
-  button:hover,
-  button:focus {
-    background-color: #337acc;
-  }
-
-  @media (max-width: 480px) {
-    main {
-      margin: 2rem 1rem 3rem;
-      padding: 2rem 1.5rem;
-    }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Growing Minds - Create Your Book</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-
-<header>
-  <h1>Growing Minds</h1>
-  <p>Personalized stories to help your child grow</p>
-</header>
-
-<main>
-  <form action="/submit" method="POST" novalidate>
-    <div>
-      <label for="childName">Child's Name</label>
-      <input type="text" id="childName" name="childName" required placeholder="e.g. Benjamin" />
+  <header class="hero">
+    <nav class="header-menu">
+      <div class="logo">
+        <img src="assets/gm-logo.png" alt="Growing Minds Logo" />
+      </div>
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#how-it-works">How It Works</a></li>
+        <li><a href="index.html#about-us">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Create Your Personalized Book</h1>
+        <p>Fill out the form below to create a story tailored to your child.</p>
+      </div>
+      <div class="hero-image">
+        <img src="assets/hero-illustration.png" alt="Mother reading to child illustration" />
+      </div>
     </div>
+    <svg class="header-curve" viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="position: absolute; bottom: 0; left: 0; width: 100%; height: auto; z-index: -1;">
+      <path fill="#fffdf8" d="M0,100 C480,200 960,0 1440,100 L1440,200 L0,200 Z"/>
+    </svg>
+  </header>
 
-    <div>
-      <label for="childAge">Child's Age</label>
-      <input type="number" id="childAge" name="childAge" min="1" max="18" required placeholder="e.g. 6" />
-    </div>
+  <main class="form-section">
+    <h2>Personalized Story Form</h2>
+    <p>Please provide the details below to create your personalized book.</p>
+    <!-- Embed JotForm -->
+    <iframe 
+      src="https://form.jotform.com/your-jotform-id" 
+      style="width: 100%; height: 800px; border: none;" 
+      title="Personalized Story Form">
+    </iframe>
+  </main>
 
-    <div>
-      <label for="childGender">Child's Gender</label>
-      <select id="childGender" name="childGender" required>
-        <option value="" disabled selected>Select gender</option>
-        <option value="female">Female</option>
-        <option value="male">Male</option>
-        <option value="nonbinary">Non-binary</option>
-        <option value="prefer_not_to_say">Prefer not to say</option>
-      </select>
-    </div>
-
-    <div>
-      <label for="childEthnicity">Child's Ethnicity</label>
-      <input type="text" id="childEthnicity" name="childEthnicity" placeholder="e.g. Hispanic, Asian, African American, etc." />
-    </div>
-
-    <div>
-      <label for="siblingsFriends">Any other siblings or friends that should be in the story</label>
-      <input type="text" id="siblingsFriends" name="siblingsFriends" placeholder="Names or descriptions" />
-    </div>
-
-    <div>
-      <label for="childDescription">Tell us as much as you can about your child</label>
-      <textarea id="childDescription" name="childDescription" required placeholder="What they look like, prominent traits like kindness, braveness, etc."></textarea>
-    </div>
-
-    <div>
-      <label for="childSurroundings">Tell us as much as you can about your child's surroundings</label>
-      <textarea id="childSurroundings" name="childSurroundings" required placeholder="Apartment or house, rural? City? Special aspects like an oak tree, loud dog next door, etc."></textarea>
-    </div>
-
-    <div>
-      <label for="developmentArea">Tell us as much as you can about the development area your child needs help tackling</label>
-      <textarea id="developmentArea" name="developmentArea" required placeholder="Biting, The Golden Rule, Being Brave, Making Friends, etc."></textarea>
-    </div>
-
-    <div>
-      <label for="anythingElse">Anything else you'd like us to know</label>
-      <textarea id="anythingElse" name="anythingElse" placeholder="Additional info or requests"></textarea>
-    </div>
-
-    <button type="submit">Checkout</button>
-  </form>
-</main>
-
+  <footer>
+    <p>For every 10 books sold, we donate 1 to a school or shelter.</p>
+    <p>&copy; 2025 Growing Minds Books. All rights reserved.</p>
+  </footer>
 </body>
 </html>
