@@ -143,7 +143,7 @@ a {
 }
 
 .hero-image img {
-  max-width: 60%; /* Reduces the size of the hero image */
+  max-width: 40%; /* Reduces the size of the hero image */
   height: auto; /* Maintains aspect ratio */
   margin: 0 auto; /* Centers the image */
 }
