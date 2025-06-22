@@ -15,7 +15,7 @@ header.header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: white;
+  background-color: #fff2d5;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
