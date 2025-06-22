@@ -1,8 +1,21 @@
-body {
+/* ===== Global ===== */
+* {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
   background-color: #fffdf8;
-  color: #333;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {
@@ -10,62 +23,74 @@ a {
   color: inherit;
 }
 
-header.header {
+/* ===== Header Menu ===== */
+.header {
+  background-color: #fff2d5; /* Sets the background color inside the header */
+  padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Aligns logo and menu items */
   align-items: center;
-  padding: 20px;
-  background-color: #fff2d5;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo a {
+  text-decoration: none;
 }
 
 .logo img {
-  height: 40px;
+  max-width: 100px; /* Adjust size of the logo */
+  height: auto;
 }
 
 .header-menu ul {
   list-style: none;
-  display: flex;
-  gap: 20px;
+  display: flex; /* Makes the menu horizontal */
+  gap: 20px; /* Adds spacing between menu items */
   margin: 0;
   padding: 0;
 }
 
-.header-menu a {
+.header-menu li {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.9rem; /* Smaller size for the menu */
   font-weight: 600;
-  font-size: 1rem;
+}
+
+.header-menu a {
+  text-decoration: none;
   color: #333;
+  transition: color 0.3s ease;
 }
 
-.btn-primary {
-  display: inline-block;
-  background-color: #ffb347;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 1rem;
-  margin-top: 10px;
+.header-menu a:hover {
+  color: #f4a261; /* Adds hover effect for interactivity */
 }
 
-/* Hero Section */
-.hero-section {
-  background-color: #fff2d5;
+/* ===== Hero Section ===== */
+.hero {
+  background: #fff2d5;
+  padding: 4rem 1rem 0;
   position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
 }
 
 .hero-container {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 20px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  background-color: #fff2d5; /* Background color for the hero container */
 }
 
 .hero-text {
@@ -73,123 +98,244 @@ header.header {
 }
 
 .hero-text h1 {
-  font-size: 2.8rem;
+  font-family: 'Nunito', sans-serif; /* Matches the mockup font */
+  font-size: 3rem; /* Adjusted size to match the mockup */
+  font-weight: 700; /* Bold text for emphasis */
+  color: #333; /* Dark color for readability */
   margin-bottom: 1rem;
 }
 
 .hero-text p {
-  font-size: 1.25rem;
+  font-family: 'Quicksand', sans-serif; /* Matches the mockup font */
+  font-size: 1.2rem; /* Slightly smaller for supporting text */
+  font-weight: 400; /* Regular weight for body text */
+  color: #666; /* Lighter color for contrast */
   margin-bottom: 1.5rem;
 }
 
+.btn-primary {
+  font-family: 'Quicksand', sans-serif; /* Matches the mockup font */
+  font-size: 1rem; /* Button text size */
+  font-weight: 600; /* Semi-bold for visibility */
+  display: inline-block;
+  background-color: #f4a261; /* Button color from the mockup */
+  color: #fff; /* White text for contrast */
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #e68500;
+}
+
+.btn-primary img {
+  margin-left: 0.6rem;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.hero-image {
+  max-width: 50%;
+}
+
 .hero-image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
 .header-curve {
   display: block;
   width: 100%;
-  height: 120px;
-  margin-top: -1px;
+  height: auto;
+  margin-top: -5px;
+  background-color: #fff2d5; /* Ensures the curve matches the hero background */
 }
 
-/* How It Works Section */
 .how-it-works {
-  background-color: #fffdf8;
-  padding: 80px 20px 60px;
+  margin-top: -50px; /* Adjusts overlap with the curve */
+  padding-top: 80px; /* Adds spacing inside the section */
+  padding: 40px 20px;
   text-align: center;
 }
 
 .how-it-works h2 {
+  font-family: 'Quicksand', sans-serif;
   font-size: 2rem;
-  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #1f2d3d;
+  position: relative;
+}
+
+.how-it-works h2::before {
+  content: "How it Works";
+  font-size: 1rem;
+  background-color: #d8f4f1;
+  color: #00303f;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+  font-family: 'Quicksand', sans-serif;
+  margin-bottom: 1rem;
+  text-align: center;
+  position: absolute;
+  top: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .steps {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
+  align-items: center; /* Centers images and text vertically */
+  gap: 20px; /* Adds spacing between steps */
+  flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
 }
 
 .step {
-  max-width: 240px;
+  text-align: center; /* Centers text below the image */
+  max-width: 300px; /* Ensures consistent width for each step */
+  margin: auto; /* Centers each step horizontally */
 }
 
 .step img {
-  width: 80px;
-  margin-bottom: 20px;
+  display: block; /* Ensures the image is treated as a block element */
+  margin: 0 auto 10px; /* Centers the image and adds spacing below it */
+  max-width: 100px; /* Ensures consistent image size */
 }
 
 .step h3 {
   font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-weight: 600;
+  margin: 0;
 }
 
 .step p {
   font-size: 1rem;
-  line-height: 1.5;
+  margin: 0;
 }
 
-/* Featured Books Section */
+.center-button {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.how-it-works .btn-primary {
+  background: #00bfa6;
+}
+
+.how-it-works .btn-primary:hover {
+  background: #009c89;
+}
+
+/* ===== Featured Books Section ===== */
 .featured-books {
-  padding: 60px 20px;
-  background-color: #fff;
+  padding: 40px 20px;
   text-align: center;
 }
 
 .featured-books h2 {
+  font-family: 'Quicksand', sans-serif;
   font-size: 2rem;
-  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 2rem;
 }
 
 .books {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  justify-content: center;
+  gap: 20px;
+}
+
+.book {
+  text-align: center; /* Centers the text below the image */
+  max-width: 250px; /* Ensures consistent width for each book */
+  margin: auto; /* Centers each book horizontally */
 }
 
 .book img {
-  height: 240px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: block; /* Ensures the image is treated as a block element */
+  margin: 0 auto; /* Centers the image horizontally */
+  max-width: 150px; /* Ensures consistent image size */
+  height: auto;
 }
 
-/* Footer */
+.book h3 {
+  font-size: 1.1rem;
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ===== Footer ===== */
 footer {
-  background-color: #fffdf8;
   text-align: center;
-  padding: 30px 20px;
-  font-size: 0.95rem;
-  color: #666;
+  padding: 20px;
+  background-color: #f9f3e9;
+  font-size: 0.9rem;
+  margin-top: 3rem;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
+  body {
+    background-color: #fff2d5; /* Sets the background color for mobile screens */
+  }
+
   .hero-container {
     flex-direction: column;
     text-align: center;
-    padding: 40px 20px 10px;
   }
 
   .hero-text {
     max-width: 100%;
+    margin-bottom: 20px;
   }
 
-  .hero-image img {
+  .hero-image {
     max-width: 80%;
-    margin-top: 20px;
   }
 
   .steps {
     flex-direction: column;
-    align-items: center;
   }
 
   .books {
     flex-direction: column;
-    align-items: center;
+  }
+
+  .book img {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .step img {
+    max-width: 80px;
+  }
+
+  .book img {
+    max-width: 100px;
   }
 }
