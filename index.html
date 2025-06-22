@@ -1,3 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Growing Minds</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .hero-section {
+      background-color: #fff2d5;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 20px 10px; /* Reduced bottom padding */
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .header-curve {
+      display: block;
+      width: 100%;
+      height: 100px;
+      margin-top: -1px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px 10px;
+      }
+
+      .hero-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .hero-image img {
+        max-width: 80%;
+      }
+    }
+  </style>
+</head>
+
 <body>
   <header class="header">
     <div class="logo">
@@ -16,7 +83,7 @@
 
   <div class="hero-container">
     <div class="hero-text">
-      <h1>Book That Help Little Hearts Grow Big</h1>
+      <h1>Books That Help Little Hearts Grow Big</h1>
       <p>Personalized stories that build empathy, confidence, and kindness.</p>
       <a href="form.html" class="btn-primary">
         Create Your Book
@@ -78,3 +145,4 @@
     <p>&copy; 2025 Growing Minds Books. All rights reserved.</p>
   </footer>
 </body>
+</html>
