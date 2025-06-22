@@ -98,7 +98,7 @@ a {
 }
 
 .hero-text h1 {
-  font-family: 'Nunito', sans-serif; /* Matches the mockup font */
+  font-family: 'Nunito'; /* Matches the mockup font */
   font-size: 3rem; /* Adjusted size to match the mockup */
   font-weight: 700; /* Bold text for emphasis */
   color: #333; /* Dark color for readability */
