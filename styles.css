@@ -83,13 +83,13 @@ a {
 }
 
 .hero-container {
-  max-width: 1200px;
-  margin: auto;
+  max-width: 900px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 40px 20px;
+  padding: 20px 10px;
   background-color: #fff2d5; /* Background color for the hero container */
 }
 
