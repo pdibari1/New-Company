@@ -159,7 +159,7 @@ a {
 
 .how-it-works {
   margin-top: 50px; /* Adds spacing above the section */
-  padding-top: 80px; /* Adds internal spacing */
+  padding-top: 40px; /* Reduces the top padding */
   padding: 40px 20px;
   text-align: center;
 }
