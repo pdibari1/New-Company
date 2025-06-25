@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How It Works - Growing Minds</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="assets/logo-trans.png" alt="Growing Minds Logo" />
+      </a>
+    </div>
+    <nav class="header-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
+        <li><a href="#about-us">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>How It Works</h1>
+        <p>From idea to bedtime story — here’s how you bring your child’s personalized book to life.</p>
+        <a href="form.html" class="btn-primary">Start Your Book</a>
+      </div>
+      <div class="hero-image">
+        <img src="assets/hero-illustration.png" alt="Mother reading to child illustration" />
+      </div>
+    </div>
+    <svg class="header-curve" viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path fill="#fffdf8" d="M0,100 C480,200 960,0 1440,100 L1440,200 L0,200 Z"/>
+    </svg>
+  </section>
+
+  <!-- How It Works Steps -->
+  <section class="how-it-works" id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <img src="assets/icon-form.png" alt="Form Icon">
+        <h3>Step 1: Fill Out the Form</h3>
+        <p>Tell us everything about your child — their name, age, personality, and even favorite animals!</p>
+      </div>
+      <div class="step">
+        <img src="assets/icon-summary.png" alt="Email Icon">
+        <h3>Step 2: Check Your Email</h3>
+        <p>You’ll receive a story summary, book number, and a link to purchase your personalized book.</p>
+      </div>
+      <div class="step">
+        <img src="assets/icon-hardcover-book.png" alt="Book Icon">
+        <h3>Step 3: Receive Your Book</h3>
+        <p>Enjoy your custom hardcover story delivered right to your door — made for cozy reading nights.</p>
+      </div>
+      <div class="step">
+        <img src="assets/icon-repeat.png" alt="Repeat Icon">
+        <h3>Step 4: Try Again or Continue</h3>
+        <p>Not in love with the summary? Try again free! Or use your book number to get the next one in the series.</p>
+      </div>
+    </div>
+    <div class="center-button">
+      <a href="form.html" class="btn-primary">Create Your Book</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>For every 10 books sold, we donate 1 to a school or shelter.</p>
+    <p>&copy; 2025 Growing Minds Books. All rights reserved.</p>
+  </footer>
+</body>
+</html>
