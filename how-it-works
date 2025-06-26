@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Growing Minds</title>
+  <title>How It Works - Growing Minds</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -18,20 +18,20 @@
     </div>
     <nav class="header-menu">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="how-it-works">How It Works</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How It Works</a></li>
         <li><a href="#about-us">About Us</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section with Wave SVG -->
-  <section class="hero-section" id="home">
+  <!-- Hero Section -->
+  <section class="hero-section">
     <div class="hero-container">
       <div class="hero-text">
-        <h1>Books That Help Little Hearts Grow Big</h1>
-        <p>Personalized stories that build empathy, confidence, and kindness.</p>
-        <a href="form.html" class="btn-primary">Create Your Book</a>
+        <h1>How It Works</h1>
+        <p>From idea to bedtime story — here’s how you bring your child’s personalized book to life.</p>
+        <a href="form.html" class="btn-primary">Start Your Book</a>
       </div>
       <div class="hero-image">
         <img src="assets/hero-illustration.png" alt="Mother reading to child illustration" />
@@ -42,41 +42,33 @@
     </svg>
   </section>
 
-  <!-- How It Works -->
+  <!-- How It Works Steps -->
   <section class="how-it-works" id="how-it-works">
     <h2>How It Works</h2>
     <div class="steps">
       <div class="step">
-        <img src="assets/icon-pick-character.png" alt="Pick a Character Icon" />
-        <h3>Pick a Character</h3>
-        <p>Add your child’s name, appearance, and even their favorite animal.</p>
+        <img src="assets/icon-form.png" alt="Form Icon">
+        <h3>Step 1: Fill Out the Form</h3>
+        <p>Tell us everything about your child — their name, age, personality, and even favorite animals!</p>
       </div>
       <div class="step">
-        <img src="assets/icon-choose-lesson.png" alt="Choose a Lesson Icon" />
-        <h3>Choose a Lesson</h3>
-        <p>Topics like friendship, empathy, bravery, self-regulation, and kindness.</p>
+        <img src="assets/icon-summary.png" alt="Email Icon">
+        <h3>Step 2: Check Your Email</h3>
+        <p>You’ll receive a story summary, book number, and a link to purchase your personalized book.</p>
       </div>
       <div class="step">
-        <img src="assets/icon-hardcover-book.png" alt="Hardcover Book Icon" />
-        <h3>Get a Hardcover Book</h3>
-        <p>Delivered to your door — designed to be read again and again.</p>
+        <img src="assets/icon-hardcover-book.png" alt="Book Icon">
+        <h3>Step 3: Receive Your Book</h3>
+        <p>Enjoy your custom hardcover story delivered right to your door — made for cozy reading nights.</p>
+      </div>
+      <div class="step">
+        <img src="assets/icon-repeat.png" alt="Repeat Icon">
+        <h3>Step 4: Try Again or Continue</h3>
+        <p>Not in love with the summary? Try again free! Or use your book number to get the next one in the series.</p>
       </div>
     </div>
-  </section>
-
-  <!-- Featured Books -->
-  <section class="featured-books">
-    <h2>Featured Books</h2>
-    <div class="books">
-      <div class="book">
-        <img src="assets/ella-friendship-forest.png" alt="Ella and the Friendship Forest" />
-      </div>
-      <div class="book">
-        <img src="assets/logan-learns-to-shine.png" alt="Logan Learns to Shine" />
-      </div>
-      <div class="book">
-        <img src="assets/ava-calms-down.png" alt="Ava Calms Down" />
-      </div>
+    <div class="center-button">
+      <a href="form.html" class="btn-primary">Create Your Book</a>
     </div>
   </section>
 
