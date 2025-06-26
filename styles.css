@@ -341,3 +341,86 @@ footer {
     max-width: 100px;
   }
 }
+/* ===== How It Works Page Specific Enhancements ===== */
+
+.how-it-works-page {
+  background-color: #fffdf8;
+  padding: 60px 20px 80px;
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.how-it-works-page h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2d3d;
+  margin-bottom: 2rem;
+}
+
+.how-it-works-page h2.section-label {
+  font-size: 1rem;
+  background-color: #d8f4f1;
+  color: #00303f;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+  font-family: 'Quicksand', sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.step-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.step-row img {
+  width: 100px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.step-row .step-content {
+  flex: 1;
+}
+
+.step-row .step-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1f2d3d;
+}
+
+.step-row .step-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.note {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 30px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .how-it-works-page h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .step-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .step-row .step-content {
+    text-align: center;
+  }
+}
