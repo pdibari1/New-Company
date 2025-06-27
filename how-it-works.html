@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>How It Works - Growing Minds</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <!-- Header -->
   <header class="header">
     <div class="logo">
       <a href="index.html">
-        <img src="assets/logo-trans.png" alt="Growing Minds Logo" />
+        <img src="logo.svg" alt="Growing Minds Logo">
       </a>
     </div>
     <nav class="header-menu">
@@ -26,41 +27,107 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-text">
-      <h1>Books That Help Little Hearts Grow Big</h1>
-      <p>Personalized stories that build empathy, confidence, and kinotess.</p>
-      <a href="form.html" class="btn-primary">Create Your Book</a>
+    <div class="hero-container">
+      <div class="hero-text">
+        <h1>Books That Help<br>Little Hearts Grow Big</h1>
+        <p>Personalized stories that build empathy, confidence, and kinotess.</p>
+        <a class="btn-primary" href="form.html">Create Your Book</a>
+      </div>
+      <div class="hero-image">
+        <img src="hero-abstract.png" alt="Decorative abstract shapes"/>
+      </div>
     </div>
   </section>
 
-  <!-- How It Works -->
+  <!-- How It Works Section -->
   <section class="how-it-works">
     <h2>How It Works</h2>
-    <div class="steps">
-      <div class="step">
-        <img src="assets/icon-form.png" alt="Form Icon">
-        <h3>Fill out the form</h3>
-        <p>with as much information as possible.</p>
+
+    <div class="step-vertical">
+      <div class="step-row">
+        <img src="icon-form.png" alt="Form Icon">
+        <div class="step-text">
+          <h3>Fill out the form</h3>
+          <p>with as much information as possible.</p>
+        </div>
       </div>
-      <div class="step">
-        <img src="assets/icon-summary.png" alt="Email Icon">
-        <h3>You’ll receive an email with a story summary, book number and link to purchase</h3>
+
+      <div class="step-row">
+        <img src="icon-summary.png" alt="Email Icon">
+        <div class="step-text">
+          <h3>You’ll receive an email</h3>
+          <p>with a story summary, book number and link to purchase</p>
+        </div>
       </div>
-      <div class="step">
-        <img src="assets/icon-hardcover-book.png" alt="Book Icon">
-        <h3>Click the link and you’ll receive your personalized hardcover book in the mail</h3>
+
+      <div class="step-row">
+        <img src="icon-hardcover-book.png" alt="Book Icon">
+        <div class="step-text">
+          <h3>Click the link and you’ll receive</h3>
+          <p>your personalized hardcover book in the mail</p>
+        </div>
       </div>
-      <div class="step">
-        <img src="assets/icon-refresh.png" alt="Refresh Icon">
-        <p>If you don’t like the summary, just try again for a whole new summary.</p>
-        <p>The book number will allow you to purchase the next book in your series!</p>
+
+      <div class="step-row">
+        <img src="icon-retry.png" alt="Retry Icon">
+        <div class="step-text">
+          <p>If you don’t like the summary, just try again for a whole new summary.</p>
+          <p>The book number will allow you to purchase the next book in your series!</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Growing Minds Books. All rights reserved.</p>
+    &copy; 2025 Growing Minds. All rights reserved.
   </footer>
+
 </body>
 </html>
+
+<style>
+.how-it-works {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #1f2d3d;
+}
+
+.step-vertical {
+  display: flex;
+  flex-direction: column; /* Ensures vertical alignment */
+  gap: 30px; /* Adds spacing between steps */
+  max-width: 700px; /* Centers the steps */
+  margin: 0 auto; /* Centers the container */
+}
+
+.step-row {
+  display: flex;
+  align-items: flex-start; /* Aligns content within each step */
+  gap: 20px; /* Adds spacing between the image and text */
+}
+
+.step img {
+  max-width: 100px; /* Sets a consistent size for images */
+  height: auto; /* Maintains aspect ratio */
+}
+
+.step h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.step p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+</style>
